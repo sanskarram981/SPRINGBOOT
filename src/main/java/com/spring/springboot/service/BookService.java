@@ -23,4 +23,20 @@ public class BookService
     {
         return this.bookRepository.findById(id).get();
     }
+
+    public Book addBooks(Book book)
+    {
+        return this.bookRepository.save(book);
+    }
+
+    public void deleteBooks(int id)
+    {
+        this.bookRepository.deleteById(id);
+    }
+
+    public Book updateBooks(Book book)
+    {
+        return this.bookRepository.save(book);
+    }
+
 }
