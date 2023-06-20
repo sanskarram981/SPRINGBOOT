@@ -6,7 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.spring.springboot.dao.BookRepository;
 import com.spring.springboot.dao.UserRepository;
+import com.spring.springboot.entities.Book;
 import com.spring.springboot.entities.User;
 
 import java.util.Collection;
@@ -20,14 +22,17 @@ public class SpringbootApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringbootApplication.class, args);
-		UserRepository userRepository = context.getBean(UserRepository.class);
-
+		//UserRepository userRepository = context.getBean(UserRepository.class);
+		//BookRepository bookRepository = context.getBean(BookRepository.class);
+		/* 
+		bookRepository.save(new Book(5,"the story of my life","Hellen Keller"));
+        */
 		/* 
 		-------------------------- Insertion -------------------------------
 		User u1 = new User("Shivam Sunderam","Ranchi","sexy");
 		System.out.println(u1);
 		User u2 = new User("Shivam Sahu","Ranchi","hot");
-		System.out.println(u2);
+		System.out.println(u2); 
 		userRepository.save(u1);
 		userRepository.save(u2);
 		List<User> users = new ArrayList<>();
